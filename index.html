@@ -37,6 +37,24 @@
   footer p{margin-bottom:10px;line-height:1.6}
   @media(max-width:600px){h1{font-size:27px}body{font-size:18px}}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2523785251409022');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2523785251409022&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -129,6 +147,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var u = new URL(a.href);
     u.searchParams.set('tid', tid);
     a.href = u.toString();
+  });
+});
+// Evento Lead: clic en cualquier CTA hacia la oferta
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a.btn').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.fbq) fbq('track', 'Lead');
+    });
   });
 });
 </script>
