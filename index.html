@@ -20,29 +20,34 @@
   body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:19px}
   .wrap{max-width:680px;margin:0 auto;padding:0 20px}
   .disclosure{font-family:Arial,sans-serif;font-size:12px;color:var(--soft);background:#f7f3ee;padding:8px 20px;text-align:center;border-bottom:1px solid var(--border)}
-  header{padding:28px 0 8px;text-align:center}
+  header{padding:26px 0 6px;text-align:center}
   .kicker{font-family:Arial,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:bold}
-  h1{font-size:34px;line-height:1.25;margin:12px 0 10px}
-  .byline{font-family:Arial,sans-serif;font-size:14px;color:var(--soft);margin-bottom:24px}
-  .hero{width:100%;border-radius:12px;margin-bottom:28px}
-  h2{font-size:26px;margin:36px 0 14px;line-height:1.3}
+  h1{font-size:33px;line-height:1.25;margin:12px 0 10px}
+  .byline{font-family:Arial,sans-serif;font-size:14px;color:var(--soft);margin-bottom:22px}
+  .hero{width:100%;border-radius:12px;margin-bottom:24px}
+  h2{font-size:26px;margin:34px 0 14px;line-height:1.3}
   p{margin-bottom:18px}
+  .lead{font-size:21px}
   .highlight{background:var(--card);border-left:4px solid var(--accent);padding:18px 22px;border-radius:0 10px 10px 0;margin:26px 0}
   ul{margin:0 0 18px 24px}
   li{margin-bottom:10px}
-  .cta-block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-align:center;margin:34px 0}
+  .cta-block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-align:center;margin:32px 0}
   .cta-block h3{font-size:23px;margin-bottom:10px}
   .cta-block p{font-size:16px;color:var(--soft)}
-  .btn{display:inline-block;font-family:Arial,sans-serif;font-size:19px;font-weight:bold;color:#fff;background:var(--accent);padding:16px 38px;border-radius:50px;text-decoration:none;margin-top:8px;box-shadow:0 4px 14px rgba(232,89,12,.35);transition:background .2s}
-  .btn:hover{background:var(--accent-dark)}
+  .btn{display:inline-block;font-family:Arial,sans-serif;font-size:19px;font-weight:bold;color:#fff;background:var(--accent);padding:16px 38px;border-radius:50px;text-decoration:none;margin-top:8px;box-shadow:0 4px 14px rgba(232,89,12,.35);transition:transform .15s,background .2s}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
   .subnote{font-family:Arial,sans-serif;font-size:13px;color:var(--soft);margin-top:10px}
+  .trust{font-family:Arial,sans-serif;font-size:13px;color:var(--soft);text-align:center;margin:6px 0 0}
   .checklist{list-style:none;margin-left:0}
   .checklist li{padding-left:30px;position:relative}
   .checklist li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:bold;font-family:Arial}
-  footer{font-family:Arial,sans-serif;font-size:12px;color:var(--soft);padding:36px 20px 48px;border-top:1px solid var(--border);margin-top:48px}
+  .quote{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px 24px;margin:26px 0;font-style:italic;font-size:18px}
+  .quote .who{font-family:Arial,sans-serif;font-style:normal;font-size:14px;color:var(--soft);margin-top:10px}
+  .stars{color:var(--accent);letter-spacing:2px;font-style:normal}
+  footer{font-family:Arial,sans-serif;font-size:12px;color:var(--soft);padding:36px 20px 48px;border-top:1px solid var(--border);margin-top:40px}
   footer p{margin-bottom:10px;line-height:1.6}
-  @media(max-width:600px){h1{font-size:27px}body{font-size:18px}}
-  .jump{font-family:Arial,sans-serif;font-size:15px;text-align:center;margin:-14px 0 22px}
+  @media(max-width:600px){h1{font-size:26px}body{font-size:18px}.lead{font-size:19px}}
+  .jump{font-family:Arial,sans-serif;font-size:15px;text-align:center;margin:-8px 0 22px}
   .jump a{color:var(--accent);font-weight:bold;text-decoration:none;border-bottom:2px dotted var(--accent)}
   .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,253,249,.97);border-top:1px solid var(--border);padding:10px 16px calc(10px + env(safe-area-inset-bottom));text-align:center;z-index:99;box-shadow:0 -4px 18px rgba(0,0,0,.08)}
   .sticky-cta .btn{font-size:17px;padding:13px 30px;margin-top:0;display:block}
@@ -76,72 +81,62 @@ src="https://www.facebook.com/tr?id=2523785251409022&ev=PageView&noscript=1"
 <div class="wrap">
   <header>
     <div class="kicker">Women's Wellness</div>
-    <h1>Why So Many Women Over 40 Say the Old Weight-Loss Advice Stopped Working — and the Simple Morning Ritual They're Trying Instead</h1>
+    <h1>After 40, the Old Weight-Loss Advice Stops Working — Here's the Morning Ritual Women Are Trying Instead</h1>
     <div class="byline">Wellness Journal · Updated July 2026</div>
   </header>
 
-  <!-- HERO: usar acá tu ilustración ganadora (mujer 40s, estilo cálido). Reemplazar src. -->
   <img class="hero" src="hero-advertorial.jpg" alt="Illustration of a woman in her 40s enjoying a calm morning routine">
 
   <p class="jump"><a href="#ritual">In a hurry? Jump straight to the ritual ↓</a></p>
 
-  <p>If you're a woman over 40, you've probably noticed something frustrating: the things that used to work — eating a little less, walking a little more — don't seem to move the needle the way they did at 30.</p>
+  <p class="lead">If you're a woman over 40, you already know the feeling: you're doing everything you used to do — eating a little less, walking a little more — and the scale just won't budge like it did at 30.</p>
 
-  <p>It's not a lack of willpower. And you're not imagining it.</p>
+  <p>Here's the part almost no one tells you: <strong>it's not your willpower. The rules changed.</strong></p>
 
-  <p>Research on aging and metabolism suggests that as women move through their 40s and 50s, hormonal shifts can change how the body stores fat and burns energy — especially around the midsection. In other words: <strong>the rules changed, but nobody told you.</strong></p>
-
-  <h2>The Part of the Story Most Diets Ignore</h2>
-
-  <p>Most mainstream weight-management plans are built around one idea: eat less, move more. That advice isn't wrong — but for many women over 40, it's incomplete, because it doesn't account for what's happening with a slowing metabolism.</p>
+  <p>As women move through their 40s and 50s, hormonal shifts change how the body stores fat and burns energy — especially around the middle. So the "eat less, move more" advice isn't wrong. It's just <em>incomplete</em>. And fighting your body harder rarely wins.</p>
 
   <div class="highlight">
-    <p style="margin:0"><strong>The shift in thinking:</strong> instead of fighting your body with harder restriction, a growing number of women are focusing on <em>supporting their metabolism</em> — with sleep, protein, strength, and targeted nutrients — so their efforts actually count.</p>
+    <p style="margin:0"><strong>The shift thousands of women are making:</strong> instead of restricting harder, they're <em>supporting their metabolism</em> — and a simple, once-a-day citrus ritual has become part of how they do it.</p>
   </div>
-
-  <p style="text-align:center;margin:26px 0">
-    <a class="btn" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">See the Citrus Ritual →</a><br>
-    <span class="subnote">The once-a-day ritual thousands of women 40+ are trying</span>
-  </p>
-
-  <h2 id="ritual">Enter the "Citrus Ritual"</h2>
-
-  <p>That's where <strong>CitrusBurn™</strong> comes in — a once-a-day supplement built around plant compounds from <strong>Spanish Seville orange peel</strong>, combined with green tea, ginger, and apple vinegar. It's designed for women who want to support their metabolism as part of a healthy routine.</p>
-
-  <p>No complicated protocols. No 6-meal-a-day schedules. Just a simple addition to your morning:</p>
-
-  <ul class="checklist">
-    <li><strong>Once a day</strong> — designed to fit into a real morning, not a fantasy one</li>
-    <li><strong>Citrus-based, plant-derived ingredients</strong> — Seville orange peel, green tea, ginger, and more</li>
-    <li><strong>Stimulant-free and non-habit forming</strong> — no jitters, no crash</li>
-    <li><strong>Formulated for women 40+</strong> — not a generic one-size-fits-all pill</li>
-    <li><strong>Made to work alongside</strong> sensible eating and movement, not replace them</li>
-  </ul>
 
   <div class="cta-block">
-    <h3>Curious if it's right for you?</h3>
-    <p>See the full ingredient list, how the formula works, and current package pricing on the official CitrusBurn™ page.</p>
-    <a class="btn" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">See How CitrusBurn™ Works →</a>
-    <p class="subnote">Ships from the USA · 180-day money-back guarantee</p>
+    <h3>Curious what the ritual is?</h3>
+    <p>See the ingredients, how it works, and today's pricing on the official page.</p>
+    <a class="btn" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">Show Me the Citrus Ritual →</a>
+    <p class="trust">🍊 Made in the USA · 180-day money-back guarantee</p>
   </div>
 
-  <h2>What Honest Expectations Look Like</h2>
+  <h2 id="ritual">Why a Spanish Orange?</h2>
 
-  <p>Let's be clear about what a supplement can and can't do. CitrusBurn™ is not a magic pill, and anyone promising overnight transformation is not being straight with you.</p>
+  <p>The ritual centers on a compound found in the peel of the <strong>Seville orange</strong> — the bitter orange grown in southern Spain. It's getting attention in metabolism research, and it's the star of a once-a-day formula called <strong>CitrusBurn™</strong>, combined with green tea, ginger, and apple vinegar.</p>
 
-  <p>What it <em>is</em>: a simple, consistent way to support your metabolism while you do the fundamentals — reasonable eating, movement you enjoy, decent sleep. Many women say the biggest change is finally feeling like their effort is <em>going somewhere</em>.</p>
+  <p>What makes women 40+ actually stick with it isn't a complicated plan. It's how <em>simple</em> it is:</p>
 
-  <p>Results vary from person to person, and the company backs every order with a <strong>180-day money-back guarantee</strong> — six full months to decide if it's for you, with a full refund if it's not. That's a fair deal.</p>
+  <ul class="checklist">
+    <li><strong>Once a day</strong> — fits a real morning, not a fantasy one</li>
+    <li><strong>Plant-based citrus compounds</strong> — Seville orange peel, green tea, ginger</li>
+    <li><strong>Stimulant-free, non-habit forming</strong> — no jitters, no afternoon crash</li>
+    <li><strong>Made for women 40+</strong> — not a generic one-size-fits-all pill</li>
+  </ul>
 
-  <h2>The Bottom Line</h2>
+  <div class="quote">
+    "I bought CitrusBurn on a whim, honestly not expecting much. What I noticed first wasn't the scale — it was my energy staying steady all day. That alone made it worth it."
+    <div class="who"><span class="stars">★★★★★</span> &nbsp;— Diane, 54 · verified customer</div>
+  </div>
 
-  <p>If your 40s (or 50s) have felt like an uphill battle against your own body, the answer probably isn't a stricter diet. It's working <em>with</em> your changing metabolism instead of against it — and for thousands of women, a once-a-day citrus ritual has become part of that shift.</p>
+  <div class="cta-block">
+    <h3>See If It's Right for You</h3>
+    <p>The official page shows the full ingredient list, how the formula works, and current package pricing — every order backed by a 180-day guarantee.</p>
+    <a class="btn" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">See How CitrusBurn™ Works →</a>
+    <p class="trust">Ships from the USA · 180-day money-back guarantee · Not sold in stores</p>
+  </div>
+
+  <p>If your 40s or 50s have felt like an uphill battle against your own body, the answer probably isn't a stricter diet. It's working <em>with</em> your changing metabolism instead of against it — and for thousands of women, that starts with one simple citrus ritual each morning. ☀️🍊</p>
 
   <div class="cta-block">
     <h3>Ready to Take a Closer Look?</h3>
-    <p>The official page covers the ingredients, the research behind them, and current package pricing — every order backed by the 60-day guarantee.</p>
     <a class="btn" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">Check Availability &amp; Pricing →</a>
-    <p class="subnote">180-day money-back guarantee · Not available in stores</p>
+    <p class="trust">180-day money-back guarantee · While supplies last</p>
   </div>
 </div>
 
@@ -159,20 +154,18 @@ src="https://www.facebook.com/tr?id=2523785251409022&ev=PageView&noscript=1"
 
 <script>
 // Tracking por anuncio: si la URL del advertorial trae ?tid=metag1,
-// ese tid se pasa al hoplink de ClickBank en ambos botones.
+// ese tid se pasa al hoplink de ClickBank en todos los botones.
 document.addEventListener('DOMContentLoaded', function () {
   var tid = new URLSearchParams(location.search).get('tid');
-  if (!tid) return;
-  tid = tid.replace(/[^a-zA-Z0-9]/g, '').slice(0, 24);
-  if (!tid) return;
-  document.querySelectorAll('a.btn').forEach(function (a) {
-    var u = new URL(a.href);
-    u.searchParams.set('tid', tid);
-    a.href = u.toString();
-  });
-});
-// Evento Lead: clic en cualquier CTA hacia la oferta
-document.addEventListener('DOMContentLoaded', function () {
+  if (tid) {
+    tid = tid.replace(/[^a-zA-Z0-9]/g, '').slice(0, 24);
+    document.querySelectorAll('a.btn').forEach(function (a) {
+      var u = new URL(a.href);
+      u.searchParams.set('tid', tid);
+      a.href = u.toString();
+    });
+  }
+  // Evento Lead: clic en cualquier CTA hacia la oferta
   document.querySelectorAll('a.btn').forEach(function (a) {
     a.addEventListener('click', function () {
       if (window.fbq) fbq('track', 'Lead');
