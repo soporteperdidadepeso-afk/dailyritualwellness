@@ -25,6 +25,14 @@
   h1{font-size:33px;line-height:1.25;margin:12px 0 10px}
   .byline{font-family:Arial,sans-serif;font-size:14px;color:var(--soft);margin-bottom:22px}
   .hero{width:100%;border-radius:12px;margin-bottom:24px}
+  .video-wrap{position:relative;display:block;margin:0 0 8px;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,.16);cursor:pointer}
+  .video-wrap img{width:100%;display:block;margin:0}
+  .video-wrap::after{content:"";position:absolute;inset:0;background:rgba(20,10,0,.14)}
+  .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:82px;height:82px;border-radius:50%;background:rgba(232,89,12,.95);box-shadow:0 6px 24px rgba(0,0,0,.35);z-index:2;display:flex;align-items:center;justify-content:center;animation:pulse 2s infinite}
+  .play::before{content:"";border-style:solid;border-width:16px 0 16px 27px;border-color:transparent transparent transparent #fff;margin-left:6px}
+  @keyframes pulse{0%{box-shadow:0 6px 24px rgba(0,0,0,.35),0 0 0 0 rgba(232,89,12,.5)}70%{box-shadow:0 6px 24px rgba(0,0,0,.35),0 0 0 18px rgba(232,89,12,0)}100%{box-shadow:0 6px 24px rgba(0,0,0,.35),0 0 0 0 rgba(232,89,12,0)}}
+  .video-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;padding:26px 16px 12px;text-align:left}
+  .video-lbl{font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:var(--accent);text-transform:uppercase;letter-spacing:1px;text-align:center;margin:0 0 10px}
   h2{font-size:26px;margin:34px 0 14px;line-height:1.3}
   p{margin-bottom:18px}
   .lead{font-size:21px}
@@ -85,9 +93,13 @@ src="https://www.facebook.com/tr?id=2523785251409022&ev=PageView&noscript=1"
     <div class="byline">Wellness Journal · Updated July 2026</div>
   </header>
 
-  <img class="hero" src="hero-advertorial.jpg" alt="Illustration of a woman in her 40s enjoying a calm morning routine">
-
-  <p class="jump"><a href="#ritual">In a hurry? Jump straight to the ritual ↓</a></p>
+  <p class="video-lbl">▶ Watch: The Morning Ritual Explained</p>
+  <a class="video-wrap" href="https://hop.clickbank.net/?affiliate=mbeltran10&amp;vendor=citrusburn&amp;tid=advmeta1" rel="nofollow sponsored">
+    <img src="hero-advertorial.jpg" alt="Watch: the citrus morning ritual for women over 40">
+    <span class="play"></span>
+    <span class="video-cap">The once-a-day citrus ritual thousands of women 40+ are trying →</span>
+  </a>
+  <p class="trust" style="margin-bottom:22px">▶ Tap to watch the free presentation</p>
 
   <p class="lead">If you're a woman over 40, you already know the feeling: you're doing everything you used to do — eating a little less, walking a little more — and the scale just won't budge like it did at 30.</p>
 
@@ -156,17 +168,22 @@ src="https://www.facebook.com/tr?id=2523785251409022&ev=PageView&noscript=1"
 // Tracking por anuncio: si la URL del advertorial trae ?tid=metag1,
 // ese tid se pasa al hoplink de ClickBank en todos los botones.
 document.addEventListener('DOMContentLoaded', function () {
+  // Todos los enlaces que van a CitrusBurn (botones + el "video")
+  var offerLinks = Array.prototype.filter.call(
+    document.querySelectorAll('a[href*="hop.clickbank.net"]'),
+    function () { return true; }
+  );
   var tid = new URLSearchParams(location.search).get('tid');
   if (tid) {
     tid = tid.replace(/[^a-zA-Z0-9]/g, '').slice(0, 24);
-    document.querySelectorAll('a.btn').forEach(function (a) {
+    offerLinks.forEach(function (a) {
       var u = new URL(a.href);
       u.searchParams.set('tid', tid);
       a.href = u.toString();
     });
   }
-  // Evento Lead: clic en cualquier CTA hacia la oferta
-  document.querySelectorAll('a.btn').forEach(function (a) {
+  // Evento Lead: clic en cualquier CTA/video hacia la oferta
+  offerLinks.forEach(function (a) {
     a.addEventListener('click', function () {
       if (window.fbq) fbq('track', 'Lead');
     });
